@@ -160,10 +160,13 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.version}</version>
 				<configuration>
-						 <include>**/ParallelRun.java</include>  
-					<parallel>methods</parallel>
+						<!-- <include>**/ParallelRun.java</include>  
+					<parallel>methods</parallel> --> 
 					<!-- <threadCount>4</threadCount> -->
-					<useUnlimitedThreads>true</useUnlimitedThreads>
+					 <!-- <useUnlimitedThreads>true</useUnlimitedThreads> -->
+					 
+					 <suiteXmlFiles> </suiteXmlFiles>
+					 
 				</configuration>
 			</plugin>
 
@@ -193,7 +196,7 @@
 								option -->
 							<parallel> methods</parallel>
 							<!-- <threadCount>4</threadCount> -->
-							<perCoreThreadCount>true</perCoreThreadCount>
+							<!-- <perCoreThreadCount>true</perCoreThreadCount> -->
 							<!-- UNCOMMENT BELOW 3 LINES - To execute using forking or combination option -->
 							<!--<forkCount>2</forkCount> <reuseForks>true</reuseForks> <reportsDirectory>${project.build.directory}/failsafe-reports_${surefire.forkNumber}</reportsDirectory> -->
 						</configuration>
